@@ -1,0 +1,277 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+// the translations
+const resources = {
+  en: {
+    translation: {
+      "home": "Home",
+      "wholesale": "Wholesale",
+      "retail": "Retail",
+      "pre_order": "Pre-order",
+      "cart": "Cart",
+      "contact_us": "Contact Us",
+      "price": "Price",
+      "size": "Size",
+      "colors": "Colors",
+      "availability": "Availability",
+      "in_stock": "In Stock",
+      "out_of_stock": "Out of Stock",
+      "add_to_cart": "Add to Cart",
+      "checkout": "Checkout",
+      "total": "Total",
+      "proforma_invoice": "Proforma Invoice",
+      "download_pdf": "Download PDF Invoice",
+      "order_sent": "Order sent successfully!",
+      "select_language": "Language",
+      "empty_cart": "Your cart is empty",
+      "quantity": "Quantity",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Welcome to Beequeen, your ultimate fashion destination.",
+      "ask_whatsapp": "Out of Stock, Need Help?",
+      "whatsapp_out_of_stock_msg": "Hello, when will the model \"{{model}}\" be available again?"
+    }
+  },
+  fr: {
+    translation: {
+      "home": "Accueil",
+      "wholesale": "Gros",
+      "retail": "Détail",
+      "pre_order": "Précommander",
+      "cart": "Panier",
+      "contact_us": "Contactez-nous",
+      "price": "Prix",
+      "size": "Taille",
+      "colors": "Couleurs",
+      "availability": "Disponibilité",
+      "in_stock": "En stock",
+      "out_of_stock": "Rupture de stock",
+      "add_to_cart": "Ajouter au panier",
+      "checkout": "Commander",
+      "total": "Total",
+      "proforma_invoice": "Facture Proforma",
+      "download_pdf": "Télécharger la facture PDF",
+      "order_sent": "Commande envoyée avec succès!",
+      "select_language": "Langue",
+      "empty_cart": "Votre panier est vide",
+      "quantity": "Quantité",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Bienvenue chez Beequeen, votre destination mode par excellence.",
+      "ask_whatsapp": "En rupture, Besoin d'aide ?",
+      "whatsapp_out_of_stock_msg": "Bonjour, quand le modèle \"{{model}}\" sera-t-il de nouveau disponible ?"
+    }
+  },
+  tr: {
+    translation: {
+      "home": "Ana Sayfa",
+      "wholesale": "Toptan",
+      "retail": "Perakende",
+      "pre_order": "Ön Sipariş",
+      "cart": "Sepet",
+      "contact_us": "Bize Ulaşın",
+      "price": "Fiyat",
+      "size": "Beden",
+      "colors": "Renkler",
+      "availability": "Stok Durumu",
+      "in_stock": "Stokta var",
+      "out_of_stock": "Stokta yok",
+      "add_to_cart": "Sepete Ekle",
+      "checkout": "Ödeme",
+      "total": "Toplam",
+      "proforma_invoice": "Proforma Fatura",
+      "download_pdf": "PDF Faturayı İndir",
+      "order_sent": "Sipariş başarıyla gönderildi!",
+      "select_language": "Dil",
+      "empty_cart": "Sepetiniz boş",
+      "quantity": "Adet",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Beequeen'e hoş geldiniz, moda adresiniz.",
+      "ask_whatsapp": "Tükendi, Yardıma ihtiyacınız var mı?",
+      "whatsapp_out_of_stock_msg": "Merhaba, \"{{model}}\" modeli ne zaman tekrar stokta olacak?"
+    }
+  },
+  es: {
+    translation: {
+      "home": "Inicio",
+      "wholesale": "Al por mayor",
+      "retail": "Al por menor",
+      "pre_order": "Pre-orden",
+      "cart": "Carrito",
+      "contact_us": "Contáctenos",
+      "price": "Precio",
+      "size": "Tamaño",
+      "colors": "Colores",
+      "availability": "Disponibilidad",
+      "in_stock": "En stock",
+      "out_of_stock": "Agotado",
+      "add_to_cart": "Añadir al carrito",
+      "checkout": "Pagar",
+      "total": "Total",
+      "proforma_invoice": "Factura Proforma",
+      "download_pdf": "Descargar Factura PDF",
+      "order_sent": "¡Pedido enviado con éxito!",
+      "select_language": "Idioma",
+      "empty_cart": "Tu carrito está vacío",
+      "quantity": "Cantidad",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Bienvenido a Beequeen, tu destino de moda."
+    }
+  },
+  pt: {
+    translation: {
+      "home": "Início",
+      "wholesale": "Atacado",
+      "retail": "Varejo",
+      "pre_order": "Pré-encomenda",
+      "cart": "Carrinho",
+      "contact_us": "Contate-nos",
+      "price": "Preço",
+      "size": "Tamanho",
+      "colors": "Cores",
+      "availability": "Disponibilidade",
+      "in_stock": "Em estoque",
+      "out_of_stock": "Esgotado",
+      "add_to_cart": "Adicionar ao carrinho",
+      "checkout": "Finalizar compra",
+      "total": "Total",
+      "proforma_invoice": "Fatura Proforma",
+      "download_pdf": "Baixar Fatura em PDF",
+      "order_sent": "Pedido enviado com sucesso!",
+      "select_language": "Idioma",
+      "empty_cart": "Seu carrinho está vazio",
+      "quantity": "Quantidade",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Bem-vindo à Beequeen, seu destino de moda."
+    }
+  },
+  ha: {
+    translation: {
+      "home": "Gida",
+      "wholesale": "Sari",
+      "retail": "Saye",
+      "pre_order": "Yi Oda Kafin",
+      "cart": "Kwando",
+      "contact_us": "Tuntube Mu",
+      "price": "Farashi",
+      "size": "Girma",
+      "colors": "Launuka",
+      "availability": "A kwai",
+      "in_stock": "Akwai a Kasa",
+      "out_of_stock": "Babu a Kasa",
+      "add_to_cart": "Saka a Kwando",
+      "checkout": "Biyan Kuɗi",
+      "total": "Jimulla",
+      "proforma_invoice": "Inbois na Farko",
+      "download_pdf": "Zazzage Inbois (PDF)",
+      "order_sent": "An aika da oda cikin nasara!",
+      "select_language": "Harshe",
+      "empty_cart": "Kwandon ka babu komai",
+      "quantity": "Yawa",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Barka da zuwa Beequeen, cibiyar kayan kwalliya."
+    }
+  },
+  yo: {
+    translation: {
+      "home": "Ile",
+      "wholesale": "Olowo Pupu",
+      "retail": "Olowo Kerekere",
+      "pre_order": "Paṣẹ tẹlẹ",
+      "cart": "Kẹkẹ",
+      "contact_us": "Kan si wa",
+      "price": "Iye owo",
+      "size": "Iwọn",
+      "colors": "Awọn awọ",
+      "availability": "Wiwa",
+      "in_stock": "O wa ninu Iṣura",
+      "out_of_stock": "Ko si ninu Iṣura",
+      "add_to_cart": "Fi sinu Kẹkẹ",
+      "checkout": "Sanwo",
+      "total": "Apapọ",
+      "proforma_invoice": "Iwe-ẹri Ibẹrẹ",
+      "download_pdf": "Ṣe igbasilẹ Iwe-ẹri PDF",
+      "order_sent": "Aṣẹ rẹ ti lọ!",
+      "select_language": "Ede",
+      "empty_cart": "Kẹkẹ rẹ ṣofo",
+      "quantity": "Opoiye",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Kaabọ si Beequeen, ibi njagun rẹ."
+    }
+  },
+  ig: {
+    translation: {
+      "home": "Ụlọ",
+      "wholesale": "Ịzụta Nnukwu",
+      "retail": "Ịzụta Ntakịrị",
+      "pre_order": "Nye iwu tupu oge eruo",
+      "cart": "Katalọgụ",
+      "contact_us": "Kpọtụrụ anyị",
+      "price": "Ọnụahịa",
+      "size": "Nha",
+      "colors": "Agba",
+      "availability": "Ọ dịnụ",
+      "in_stock": "Ọ dị na Stọk",
+      "out_of_stock": "Ọnweghị na Stọk",
+      "add_to_cart": "Tụkwasị na Katalọgụ",
+      "checkout": "Kwụọ ụgwọ",
+      "total": "Ngụkọta",
+      "proforma_invoice": "Akwụkwọ ọnụahịa Proforma",
+      "download_pdf": "Bipụta Akwụkwọ ọnụahịa PDF",
+      "order_sent": "Ezigaara iwu ahụ n'ụzọ gara nke ọma!",
+      "select_language": "Asụsụ",
+      "empty_cart": "Katalọgụ gị tọgbọrọ chakoo",
+      "quantity": "Ọnụọgụ",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Nnọọ na Beequeen, ebe ejiji gị."
+    }
+  },
+  pcm: {
+    translation: {
+      "home": "Hause",
+      "wholesale": "Wholesale",
+      "retail": "Retail",
+      "pre_order": "Pre-order",
+      "cart": "Cart",
+      "contact_us": "Holla at Us",
+      "price": "Moni",
+      "size": "Size",
+      "colors": "Colors",
+      "availability": "E dey?",
+      "in_stock": "E dey ground",
+      "out_of_stock": "E don finish",
+      "add_to_cart": "Put for Cart",
+      "checkout": "Pay Now",
+      "total": "Total",
+      "proforma_invoice": "Proforma Invoice",
+      "download_pdf": "Download PDF Invoice",
+      "order_sent": "Your order don go!",
+      "select_language": "Language",
+      "empty_cart": "Your cart empty o",
+      "quantity": "How many",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "beequeen_desc": "Welcome to Beequeen, your sure fashion plug."
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: "en", // default language
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false 
+    }
+  });
+
+export default i18n;
